@@ -14,6 +14,8 @@
 		05030CE727480BF80032F3D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05030CE627480BF80032F3D5 /* Assets.xcassets */; };
 		05030CEA27480BF80032F3D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05030CE827480BF80032F3D5 /* LaunchScreen.storyboard */; };
 		05030CF327480C5D0032F3D5 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05030CF227480C5D0032F3D5 /* Session.swift */; };
+		05FAB2CA274B76EF00B791CB /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FAB2C9274B76EF00B791CB /* Friends.swift */; };
+		05FAB2D1274B790E00B791CB /* WKNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FAB2D0274B790E00B791CB /* WKNavigationDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		05030CE927480BF80032F3D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05030CEB27480BF80032F3D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05030CF227480C5D0032F3D5 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		05FAB2C9274B76EF00B791CB /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
+		05FAB2D0274B790E00B791CB /* WKNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKNavigationDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				05030CF127480C490032F3D5 /* API */,
-				05030CDD27480BF70032F3D5 /* AppDelegate.swift */,
-				05030CDF27480BF70032F3D5 /* SceneDelegate.swift */,
-				05030CE127480BF70032F3D5 /* ViewController.swift */,
-				05030CE327480BF70032F3D5 /* Main.storyboard */,
-				05030CE627480BF80032F3D5 /* Assets.xcassets */,
-				05030CE827480BF80032F3D5 /* LaunchScreen.storyboard */,
-				05030CEB27480BF80032F3D5 /* Info.plist */,
+				05FAB2CC274B777800B791CB /* Auth */,
+				05FAB2CD274B77B500B791CB /* Application */,
+				05FAB2CE274B77F200B791CB /* Resources */,
 			);
 			path = "cleint-Server-VK";
 			sourceTree = "<group>";
@@ -73,9 +73,87 @@
 		05030CF127480C490032F3D5 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				05030CF227480C5D0032F3D5 /* Session.swift */,
+				05FAB2C8274B76AB00B791CB /* Service */,
+				05FAB2CB274B76FA00B791CB /* Friends */,
+				05FAB2D4274B7F7A00B791CB /* GroupsSearch */,
+				05FAB2D3274B7F6F00B791CB /* Groups */,
+				05FAB2D2274B7F4200B791CB /* Photos */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		05FAB2C8274B76AB00B791CB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				05030CF227480C5D0032F3D5 /* Session.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		05FAB2CB274B76FA00B791CB /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				05FAB2C9274B76EF00B791CB /* Friends.swift */,
+			);
+			name = Friends;
+			sourceTree = "<group>";
+		};
+		05FAB2CC274B777800B791CB /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				05030CE127480BF70032F3D5 /* ViewController.swift */,
+				05030CE327480BF70032F3D5 /* Main.storyboard */,
+				05FAB2CF274B78EA00B791CB /* Extensions */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		05FAB2CD274B77B500B791CB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				05030CDD27480BF70032F3D5 /* AppDelegate.swift */,
+				05030CDF27480BF70032F3D5 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		05FAB2CE274B77F200B791CB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				05030CE627480BF80032F3D5 /* Assets.xcassets */,
+				05030CE827480BF80032F3D5 /* LaunchScreen.storyboard */,
+				05030CEB27480BF80032F3D5 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		05FAB2CF274B78EA00B791CB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				05FAB2D0274B790E00B791CB /* WKNavigationDelegate.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		05FAB2D2274B7F4200B791CB /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		05FAB2D3274B7F6F00B791CB /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
+		05FAB2D4274B7F7A00B791CB /* GroupsSearch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GroupsSearch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +230,8 @@
 				05030CF327480C5D0032F3D5 /* Session.swift in Sources */,
 				05030CE227480BF70032F3D5 /* ViewController.swift in Sources */,
 				05030CDE27480BF70032F3D5 /* AppDelegate.swift in Sources */,
+				05FAB2CA274B76EF00B791CB /* Friends.swift in Sources */,
+				05FAB2D1274B790E00B791CB /* WKNavigationDelegate.swift in Sources */,
 				05030CE027480BF70032F3D5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,7 +382,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "cleint-Server-VK/Info.plist";
+				INFOPLIST_FILE = "cleint-Server-VK/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -329,7 +409,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "cleint-Server-VK/Info.plist";
+				INFOPLIST_FILE = "cleint-Server-VK/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
